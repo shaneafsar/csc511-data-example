@@ -1,9 +1,14 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model() {
+  queryParams: {
+    s: {
+      refreshModel: true
+    }
+  },
+  model(params) {
     return this.store.query('result', {
-      s: 'test'
+      s: params.s || 'test'
     });
   }
 });

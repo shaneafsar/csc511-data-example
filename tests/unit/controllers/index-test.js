@@ -9,4 +9,10 @@ module('Unit | Controller | index', function(hooks) {
     let controller = this.owner.lookup('controller:index');
     assert.ok(controller);
   });
+
+  test('update property action', function(assert) {
+    let controller = this.owner.lookup('controller:index');
+    controller.send('update');
+    assert.equal(controller.get('prop1'), 'updated', 'prop1 value updated');
+  });
 });

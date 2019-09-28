@@ -5,7 +5,7 @@ export default Controller.extend({
   prop1: 'test',
   actions: {
     submit() {
-      this.transitionToRoute('index', { queryParams: { s: 'lion' } });
+      this.transitionToRoute('index', { queryParams: { s: 'star' } });
     },
     update() {
       this.set('prop1', 'updated');

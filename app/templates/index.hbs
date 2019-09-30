@@ -1,10 +1,10 @@
-<BsButton @id='test' @onClick={{action "submit"}}>Button</BsButton>
+<BsButton @id="test" @onClick={{action "submit"}}>Button</BsButton>
 
 <ol>
-{{#each this.model as |movie|}}
-  <li>
-    <LinkTo @route='detail' @model={{movie}}>{{movie.Title}}</LinkTo>
-  </li>
-{{/each}}
+  {{#each this.model as |movie|}}
+    <li>
+      <LinkTo @route="detail" @model={{movie.id}}>{{movie.Title}}</LinkTo>
+    </li>
+  {{/each}}
 </ol>
 {{outlet}}

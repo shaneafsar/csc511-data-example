@@ -3,7 +3,7 @@
 <ol>
 {{#each this.model as |movie|}}
   <li>
-    {{movie.Title}}
+    <LinkTo @route='detail' @model={{movie}}>{{movie.Title}}</LinkTo>
   </li>
 {{/each}}
 </ol>
